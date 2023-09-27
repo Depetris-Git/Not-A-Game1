@@ -42,8 +42,6 @@
             this.Bt_Help = new System.Windows.Forms.Button();
             this.ProBar_HP_Player = new System.Windows.Forms.ProgressBar();
             this.ProBar_HP_Enemy = new System.Windows.Forms.ProgressBar();
-            this.PicBox_Player = new System.Windows.Forms.PictureBox();
-            this.PicBox_Enemy = new System.Windows.Forms.PictureBox();
             this.Bt_Play = new System.Windows.Forms.Button();
             this.Lb_Title = new System.Windows.Forms.Label();
             this.ToolTip = new System.Windows.Forms.ToolTip(this.components);
@@ -51,14 +49,21 @@
             this.Lb_Action = new System.Windows.Forms.Label();
             this.Lb_Turn2 = new System.Windows.Forms.Label();
             this.lbPause = new System.Windows.Forms.Label();
+            this.Bt_Invenitory = new System.Windows.Forms.Button();
+            this.PicBox_FightBackground = new System.Windows.Forms.PictureBox();
+            this.PicBox_Player = new System.Windows.Forms.PictureBox();
+            this.PicBox_Enemy = new System.Windows.Forms.PictureBox();
+            this.PicBox_TitleScreen = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.PicBox_FightBackground)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicBox_Player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicBox_Enemy)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicBox_TitleScreen)).BeginInit();
             this.SuspendLayout();
             // 
             // Bt_Attack
             // 
             this.Bt_Attack.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Bt_Attack.Location = new System.Drawing.Point(301, 294);
+            this.Bt_Attack.Location = new System.Drawing.Point(301, 153);
             this.Bt_Attack.Margin = new System.Windows.Forms.Padding(4);
             this.Bt_Attack.Name = "Bt_Attack";
             this.Bt_Attack.Size = new System.Drawing.Size(115, 55);
@@ -71,7 +76,7 @@
             // Bt_Special
             // 
             this.Bt_Special.Font = new System.Drawing.Font("Gloucester MT Extra Condensed", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Bt_Special.Location = new System.Drawing.Point(424, 357);
+            this.Bt_Special.Location = new System.Drawing.Point(301, 342);
             this.Bt_Special.Margin = new System.Windows.Forms.Padding(4);
             this.Bt_Special.Name = "Bt_Special";
             this.Bt_Special.Size = new System.Drawing.Size(115, 55);
@@ -84,7 +89,7 @@
             // Bt_Defend
             // 
             this.Bt_Defend.Font = new System.Drawing.Font("Impact", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Bt_Defend.Location = new System.Drawing.Point(424, 294);
+            this.Bt_Defend.Location = new System.Drawing.Point(301, 216);
             this.Bt_Defend.Margin = new System.Windows.Forms.Padding(4);
             this.Bt_Defend.Name = "Bt_Defend";
             this.Bt_Defend.Size = new System.Drawing.Size(115, 55);
@@ -109,10 +114,10 @@
             // Bt_Pause
             // 
             this.Bt_Pause.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Bt_Pause.Location = new System.Drawing.Point(56, 448);
+            this.Bt_Pause.Location = new System.Drawing.Point(200, 450);
             this.Bt_Pause.Margin = new System.Windows.Forms.Padding(4);
             this.Bt_Pause.Name = "Bt_Pause";
-            this.Bt_Pause.Size = new System.Drawing.Size(175, 55);
+            this.Bt_Pause.Size = new System.Drawing.Size(139, 55);
             this.Bt_Pause.TabIndex = 6;
             this.Bt_Pause.Text = "Pause";
             this.Bt_Pause.UseVisualStyleBackColor = true;
@@ -121,8 +126,10 @@
             // Lb_Player_HP
             // 
             this.Lb_Player_HP.AutoSize = true;
+            this.Lb_Player_HP.BackColor = System.Drawing.Color.Transparent;
             this.Lb_Player_HP.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lb_Player_HP.Location = new System.Drawing.Point(51, 54);
+            this.Lb_Player_HP.ForeColor = System.Drawing.Color.White;
+            this.Lb_Player_HP.Location = new System.Drawing.Point(51, 36);
             this.Lb_Player_HP.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lb_Player_HP.Name = "Lb_Player_HP";
             this.Lb_Player_HP.Size = new System.Drawing.Size(205, 29);
@@ -132,8 +139,10 @@
             // Lb_Enemy_HP
             // 
             this.Lb_Enemy_HP.AutoSize = true;
+            this.Lb_Enemy_HP.BackColor = System.Drawing.Color.Transparent;
             this.Lb_Enemy_HP.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lb_Enemy_HP.Location = new System.Drawing.Point(767, 54);
+            this.Lb_Enemy_HP.ForeColor = System.Drawing.Color.White;
+            this.Lb_Enemy_HP.Location = new System.Drawing.Point(767, 39);
             this.Lb_Enemy_HP.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lb_Enemy_HP.Name = "Lb_Enemy_HP";
             this.Lb_Enemy_HP.Size = new System.Drawing.Size(205, 29);
@@ -143,8 +152,10 @@
             // Lb_Turn
             // 
             this.Lb_Turn.AutoSize = true;
+            this.Lb_Turn.BackColor = System.Drawing.Color.Transparent;
             this.Lb_Turn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lb_Turn.Location = new System.Drawing.Point(383, 18);
+            this.Lb_Turn.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Lb_Turn.Location = new System.Drawing.Point(465, 18);
             this.Lb_Turn.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lb_Turn.Name = "Lb_Turn";
             this.Lb_Turn.Size = new System.Drawing.Size(143, 29);
@@ -154,18 +165,20 @@
             // Lb_Cooldown
             // 
             this.Lb_Cooldown.AutoSize = true;
-            this.Lb_Cooldown.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lb_Cooldown.Location = new System.Drawing.Point(419, 416);
+            this.Lb_Cooldown.BackColor = System.Drawing.Color.Transparent;
+            this.Lb_Cooldown.Font = new System.Drawing.Font("Copperplate Gothic Light", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lb_Cooldown.ForeColor = System.Drawing.Color.White;
+            this.Lb_Cooldown.Location = new System.Drawing.Point(297, 398);
             this.Lb_Cooldown.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lb_Cooldown.Name = "Lb_Cooldown";
-            this.Lb_Cooldown.Size = new System.Drawing.Size(148, 29);
+            this.Lb_Cooldown.Size = new System.Drawing.Size(176, 25);
             this.Lb_Cooldown.TabIndex = 10;
             this.Lb_Cooldown.Text = "Cooldown: 0";
             // 
             // Bt_Dodge
             // 
             this.Bt_Dodge.Font = new System.Drawing.Font("Palatino Linotype", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Bt_Dodge.Location = new System.Drawing.Point(301, 357);
+            this.Bt_Dodge.Location = new System.Drawing.Point(301, 279);
             this.Bt_Dodge.Margin = new System.Windows.Forms.Padding(4);
             this.Bt_Dodge.Name = "Bt_Dodge";
             this.Bt_Dodge.Size = new System.Drawing.Size(115, 55);
@@ -191,7 +204,7 @@
             // 
             this.ProBar_HP_Player.BackColor = System.Drawing.Color.Red;
             this.ProBar_HP_Player.ForeColor = System.Drawing.Color.Green;
-            this.ProBar_HP_Player.Location = new System.Drawing.Point(56, 89);
+            this.ProBar_HP_Player.Location = new System.Drawing.Point(56, 65);
             this.ProBar_HP_Player.Margin = new System.Windows.Forms.Padding(4);
             this.ProBar_HP_Player.Name = "ProBar_HP_Player";
             this.ProBar_HP_Player.Size = new System.Drawing.Size(237, 18);
@@ -201,33 +214,11 @@
             // 
             this.ProBar_HP_Enemy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.ProBar_HP_Enemy.ForeColor = System.Drawing.Color.Green;
-            this.ProBar_HP_Enemy.Location = new System.Drawing.Point(772, 89);
+            this.ProBar_HP_Enemy.Location = new System.Drawing.Point(772, 69);
             this.ProBar_HP_Enemy.Margin = new System.Windows.Forms.Padding(4);
             this.ProBar_HP_Enemy.Name = "ProBar_HP_Enemy";
             this.ProBar_HP_Enemy.Size = new System.Drawing.Size(237, 17);
             this.ProBar_HP_Enemy.TabIndex = 15;
-            // 
-            // PicBox_Player
-            // 
-            this.PicBox_Player.Image = global::PrimerasClases.Properties.Resources.Player_Alt;
-            this.PicBox_Player.Location = new System.Drawing.Point(56, 89);
-            this.PicBox_Player.Margin = new System.Windows.Forms.Padding(4);
-            this.PicBox_Player.Name = "PicBox_Player";
-            this.PicBox_Player.Size = new System.Drawing.Size(237, 342);
-            this.PicBox_Player.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PicBox_Player.TabIndex = 16;
-            this.PicBox_Player.TabStop = false;
-            // 
-            // PicBox_Enemy
-            // 
-            this.PicBox_Enemy.Image = global::PrimerasClases.Properties.Resources.Enemy;
-            this.PicBox_Enemy.Location = new System.Drawing.Point(772, 113);
-            this.PicBox_Enemy.Margin = new System.Windows.Forms.Padding(4);
-            this.PicBox_Enemy.Name = "PicBox_Enemy";
-            this.PicBox_Enemy.Size = new System.Drawing.Size(237, 297);
-            this.PicBox_Enemy.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PicBox_Enemy.TabIndex = 17;
-            this.PicBox_Enemy.TabStop = false;
             // 
             // Bt_Play
             // 
@@ -244,13 +235,15 @@
             // Lb_Title
             // 
             this.Lb_Title.AutoSize = true;
-            this.Lb_Title.Font = new System.Drawing.Font("Engravers MT", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lb_Title.Location = new System.Drawing.Point(207, 84);
+            this.Lb_Title.BackColor = System.Drawing.Color.Transparent;
+            this.Lb_Title.Font = new System.Drawing.Font("Castellar", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lb_Title.ForeColor = System.Drawing.Color.Gold;
+            this.Lb_Title.Location = new System.Drawing.Point(390, 84);
             this.Lb_Title.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lb_Title.Name = "Lb_Title";
-            this.Lb_Title.Size = new System.Drawing.Size(589, 35);
+            this.Lb_Title.Size = new System.Drawing.Size(281, 36);
             this.Lb_Title.TabIndex = 19;
-            this.Lb_Title.Text = "INSERT NAME OF THE GAME";
+            this.Lb_Title.Text = "GENERIC NAME";
             this.Lb_Title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // TimerLoop
@@ -261,11 +254,12 @@
             // Lb_Action
             // 
             this.Lb_Action.AutoSize = true;
+            this.Lb_Action.BackColor = System.Drawing.Color.Transparent;
             this.Lb_Action.Font = new System.Drawing.Font("Castellar", 19.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lb_Action.ForeColor = System.Drawing.Color.MediumVioletRed;
             this.Lb_Action.Location = new System.Drawing.Point(320, 80);
             this.Lb_Action.Name = "Lb_Action";
-            this.Lb_Action.Size = new System.Drawing.Size(345, 41);
+            this.Lb_Action.Size = new System.Drawing.Size(341, 40);
             this.Lb_Action.TabIndex = 20;
             this.Lb_Action.Text = "Special Dodged!";
             this.Lb_Action.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -274,6 +268,7 @@
             // 
             this.Lb_Turn2.AutoSize = true;
             this.Lb_Turn2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lb_Turn2.ForeColor = System.Drawing.Color.White;
             this.Lb_Turn2.Location = new System.Drawing.Point(522, 47);
             this.Lb_Turn2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lb_Turn2.Name = "Lb_Turn2";
@@ -284,22 +279,86 @@
             // lbPause
             // 
             this.lbPause.AutoSize = true;
+            this.lbPause.BackColor = System.Drawing.Color.Transparent;
             this.lbPause.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPause.ForeColor = System.Drawing.Color.White;
             this.lbPause.Location = new System.Drawing.Point(457, 157);
             this.lbPause.Name = "lbPause";
             this.lbPause.Size = new System.Drawing.Size(152, 42);
             this.lbPause.TabIndex = 22;
             this.lbPause.Text = "Paused";
             // 
+            // Bt_Invenitory
+            // 
+            this.Bt_Invenitory.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Bt_Invenitory.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Bt_Invenitory.Location = new System.Drawing.Point(48, 450);
+            this.Bt_Invenitory.Margin = new System.Windows.Forms.Padding(4);
+            this.Bt_Invenitory.Name = "Bt_Invenitory";
+            this.Bt_Invenitory.Size = new System.Drawing.Size(147, 55);
+            this.Bt_Invenitory.TabIndex = 23;
+            this.Bt_Invenitory.Text = "Inventory";
+            this.Bt_Invenitory.UseVisualStyleBackColor = true;
+            // 
+            // PicBox_FightBackground
+            // 
+            this.PicBox_FightBackground.BackColor = System.Drawing.Color.Transparent;
+            this.PicBox_FightBackground.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PicBox_FightBackground.Image = global::PrimerasClases.Properties.Resources.FightBackground;
+            this.PicBox_FightBackground.Location = new System.Drawing.Point(0, 0);
+            this.PicBox_FightBackground.Name = "PicBox_FightBackground";
+            this.PicBox_FightBackground.Size = new System.Drawing.Size(1067, 554);
+            this.PicBox_FightBackground.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PicBox_FightBackground.TabIndex = 25;
+            this.PicBox_FightBackground.TabStop = false;
+            // 
+            // PicBox_Player
+            // 
+            this.PicBox_Player.BackColor = System.Drawing.Color.Transparent;
+            this.PicBox_Player.Image = global::PrimerasClases.Properties.Resources.Player_Alt;
+            this.PicBox_Player.Location = new System.Drawing.Point(56, 89);
+            this.PicBox_Player.Margin = new System.Windows.Forms.Padding(4);
+            this.PicBox_Player.Name = "PicBox_Player";
+            this.PicBox_Player.Size = new System.Drawing.Size(237, 342);
+            this.PicBox_Player.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PicBox_Player.TabIndex = 16;
+            this.PicBox_Player.TabStop = false;
+            // 
+            // PicBox_Enemy
+            // 
+            this.PicBox_Enemy.BackColor = System.Drawing.Color.Transparent;
+            this.PicBox_Enemy.Image = global::PrimerasClases.Properties.Resources.Enemy;
+            this.PicBox_Enemy.Location = new System.Drawing.Point(772, 89);
+            this.PicBox_Enemy.Margin = new System.Windows.Forms.Padding(4);
+            this.PicBox_Enemy.Name = "PicBox_Enemy";
+            this.PicBox_Enemy.Size = new System.Drawing.Size(237, 342);
+            this.PicBox_Enemy.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PicBox_Enemy.TabIndex = 17;
+            this.PicBox_Enemy.TabStop = false;
+            // 
+            // PicBox_TitleScreen
+            // 
+            this.PicBox_TitleScreen.BackColor = System.Drawing.Color.Transparent;
+            this.PicBox_TitleScreen.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PicBox_TitleScreen.Image = global::PrimerasClases.Properties.Resources.TitleScreen;
+            this.PicBox_TitleScreen.InitialImage = null;
+            this.PicBox_TitleScreen.Location = new System.Drawing.Point(0, 0);
+            this.PicBox_TitleScreen.Name = "PicBox_TitleScreen";
+            this.PicBox_TitleScreen.Size = new System.Drawing.Size(1067, 554);
+            this.PicBox_TitleScreen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PicBox_TitleScreen.TabIndex = 24;
+            this.PicBox_TitleScreen.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 554);
-            this.Controls.Add(this.lbPause);
-            this.Controls.Add(this.Lb_Action);
-            this.Controls.Add(this.Lb_Turn2);
             this.Controls.Add(this.Lb_Title);
+            this.Controls.Add(this.Lb_Action);
+            this.Controls.Add(this.Bt_Invenitory);
+            this.Controls.Add(this.lbPause);
+            this.Controls.Add(this.Lb_Turn2);
             this.Controls.Add(this.Bt_Play);
             this.Controls.Add(this.ProBar_HP_Enemy);
             this.Controls.Add(this.ProBar_HP_Player);
@@ -316,11 +375,15 @@
             this.Controls.Add(this.Bt_Attack);
             this.Controls.Add(this.PicBox_Player);
             this.Controls.Add(this.PicBox_Enemy);
+            this.Controls.Add(this.PicBox_TitleScreen);
+            this.Controls.Add(this.PicBox_FightBackground);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.PicBox_FightBackground)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicBox_Player)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicBox_Enemy)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicBox_TitleScreen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -349,6 +412,9 @@
         private System.Windows.Forms.Label Lb_Action;
         private System.Windows.Forms.Label Lb_Turn2;
         private System.Windows.Forms.Label lbPause;
+        private System.Windows.Forms.Button Bt_Invenitory;
+        private System.Windows.Forms.PictureBox PicBox_TitleScreen;
+        private System.Windows.Forms.PictureBox PicBox_FightBackground;
     }
 }
 

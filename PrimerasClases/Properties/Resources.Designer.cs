@@ -73,6 +73,16 @@ namespace PrimerasClases.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap FightBackground {
+            get {
+                object obj = ResourceManager.GetObject("FightBackground", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Player {
             get {
                 object obj = ResourceManager.GetObject("Player", resourceCulture);
@@ -106,6 +116,16 @@ namespace PrimerasClases.Properties {
         internal static System.Drawing.Bitmap Player1 {
             get {
                 object obj = ResourceManager.GetObject("Player1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TitleScreen {
+            get {
+                object obj = ResourceManager.GetObject("TitleScreen", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

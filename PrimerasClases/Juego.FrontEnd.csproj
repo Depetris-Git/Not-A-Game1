@@ -99,7 +99,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\FightBackground.jpg" />
     <Content Include="Resources\Player_Alt.png" />
+    <None Include="Resources\TitleScreen.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
