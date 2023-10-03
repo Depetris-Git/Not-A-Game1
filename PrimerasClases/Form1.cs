@@ -47,7 +47,7 @@ namespace PrimerasClases
         Inventory playerInventory = new Inventory();
 
         Icon GauntletCursor = Resources.GauntletCursorIcon;
-        Icon SwordCursor = Resources.SwordCursorIcon;
+        //Icon SwordCursor = Resources.SwordCursorIcon;
 
 
         /*  private void GenerateEquipment(NameNewEquipment)    traté de hacer un método que creara un ítem desde el comienzo
@@ -302,8 +302,7 @@ namespace PrimerasClases
             MessageBox.Show("Here you can see the items you've obtained and you have equipped\n\r" +
                 "If the item has a rosy brown color, it is common;\n\rif sky blue, is rare; \n\r" +
                 "and if it is orange, then it is legendary.\n\r" +
-                "You can only equip 1 type of item at a time, also Two-handed swords cannot be used\n\r" +
-                "with shields.",
+                "You can only equip 1 type of item at a time, also Two-handed swords cannot be used with shields nor one-handed swords.",
                "Inventory Instructions");
         }
 

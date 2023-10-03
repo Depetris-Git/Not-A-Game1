@@ -32,24 +32,71 @@ namespace Juego.BackEnd
             }
         }
         
-        public Equipment Search(string aName)
+        public string SearchBoth(string aName)
+        {
+            string name;
+            for (int i = 0; i < InventoryRow; i++)
+            {
+                if (PlayerInventory[i] == null)
+                {
+                    name = string.Empty;
+                }
+                else
+                {
+                    name = PlayerInventory[i].Name;
+                }
+                if (name != string.Empty)
+                {
+                    if (PlayerInventory[i].Name == aName)
+                    {
+                        return i.ToString();
+                    }
+                }
+
+            }
+            for (int i = 0; i<EquipRow; i++)
+            {
+                if (PlayerEquipment[i] == null)
+                {
+                    name = string.Empty;
+                }
+                else
+                {
+                    name = PlayerEquipment[i].Name;
+                }
+                if (name != string.Empty)
+                {
+                    if (PlayerEquipment[i].Name == aName)
+                    {
+                        return i.ToString();
+                    }
+                }
+            }
+            return null;
+        }
+        public string SearchInventory(string aName)
         {
             for (int i = 0; i < InventoryRow; i++)
             {
                 if (PlayerInventory[i].Name == aName)
                 {
-                    return PlayerInventory[i];
+                    return i.ToString();
                 }
             }
-            for (int i = 0; i<EquipRow; i++)
+            return null;
+        }
+        public string SearchEquipment(string aName)
+        {
+            for (int i = 0; i < EquipRow; i++)
             {
                 if (PlayerEquipment[i].Name == aName)
                 {
-                    return PlayerEquipment[i];
+                    return i.ToString();
                 }
             }
-                return null;
+            return null;
         }
+
         public void Unequip(int Row)
         {
             if (PlayerEquipment[Row] != null)
@@ -58,44 +105,63 @@ namespace Juego.BackEnd
             }
             PlayerEquipment[Row] = null;
         }
+
+        public void DropItem(int Row)
+        {
+            PlayerEquipment[Row] = null;
+        }
+
         public void Equip(Equipment item)
         {
+           int Row = Convert.ToInt32(SearchBoth(item.Name));
             switch (item.Type)
             {
                 case ("Two-Handed Weapon"):
+                    PlayerInventory[Row] = null;
                     Unequip(0);
                     Unequip(1);
                     Unequip(2);
                     PlayerEquipment[0] = item;
                     PlayerEquipment[1] = null;
+                    PlayerEquipment[2] = null;
                     break;
 
                 case ("One-Handed Weapon"):
+                    PlayerInventory[Row] = null;
+                    Unequip(0);
                     Unequip(1);
+                    PlayerEquipment[0] = null;
                     PlayerEquipment[1] = item;
                     break;
 
                 case ("Shield"):
+                    PlayerInventory[Row] = null;
+                    Unequip(0);
                     Unequip(2);
+                    PlayerEquipment[0] = null;
                     PlayerEquipment[2] = item;
                     break;
 
                 case ("Helmet"):
+                    PlayerInventory[Row] = null;
                     Unequip(3);
                     PlayerEquipment[3] = item;
                     break;
 
                 case ("Chestplate"):
+                    PlayerInventory[Row] = null;
                     Unequip(4);
                     PlayerEquipment[4] = item;
                     break;
 
                 case ("Gauntlet"):
+                    PlayerInventory[Row] = null;
                     Unequip(5);
                     PlayerEquipment[5] = item;
                     break;
 
                 case ("Boots"):
+                    PlayerInventory[Row] = null;
                     Unequip(6);
                     PlayerEquipment[6] = item;
                     break;
