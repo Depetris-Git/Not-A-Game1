@@ -96,10 +96,28 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Red_Xsvg.png" />
+    <None Include="Resources\TwoHandedSwordIcon.png" />
+    <None Include="Resources\SwordIcon.png" />
+    <None Include="Resources\ShieldIcon.png" />
+    <None Include="Resources\Spiked_Shield.png" />
+    <None Include="Resources\Slash.gif" />
+    <None Include="Resources\Shield.png" />
     <None Include="Resources\SwordIcon.ico" />
     <None Include="Resources\Zweihander.png" />
     <None Include="Resources\FightBackground.jpg" />
     <None Include="Resources\gauntlet.ico" />
+    <None Include="Resources\Boots.png" />
+    <None Include="Resources\Chestplate.png" />
+    <None Include="Resources\Gauntlets.png" />
+    <None Include="Resources\Helmet.png" />
+    <None Include="Resources\InventoryBackground.jpg" />
+    <None Include="Resources\MultiSlash.gif" />
+    <None Include="Resources\OneHandedSword.png" />
+    <None Include="Resources\BootsIcon.png" />
+    <None Include="Resources\ChestplateIcon.png" />
+    <None Include="Resources\GauntletIcon.png" />
+    <None Include="Resources\HelmetIcon.png" />
     <Content Include="Resources\Player_Alt.png" />
     <None Include="Resources\TitleScreen.jpg" />
   </ItemGroup>

@@ -11,9 +11,9 @@ namespace Juego.BackEnd
 {
     public class Inventory
     {
-        public Equipment[] PlayerEquipment = new Equipment[6];
+        public Equipment[] PlayerEquipment = new Equipment[7];
         public Equipment[] PlayerInventory = new Equipment[12];
-        private int EquipRow = 6;
+        private int EquipRow = 7;
         private int InventoryRow = 12;
 
         public void PickUp(Equipment equip)
@@ -28,7 +28,7 @@ namespace Juego.BackEnd
                 }
             if (PickedUp == false)
             {
-                // Text = "Inventory is already full"
+                MessageBox.Show("Inventory is already full.", "Inventory Full"); 
             }
         }
         
@@ -62,35 +62,42 @@ namespace Juego.BackEnd
         {
             switch (item.Type)
             {
-                case ("Two-handed weapon"):
+                case ("Two-Handed Weapon"):
                     Unequip(0);
                     Unequip(1);
-                    PlayerInventory[0] = item;
-                    PlayerInventory[1] = null;
+                    Unequip(2);
+                    PlayerEquipment[0] = item;
+                    PlayerEquipment[1] = null;
                     break;
 
-                case ("One-handed weapon"):
-                    PlayerInventory[0] = item;
+                case ("One-Handed Weapon"):
+                    Unequip(1);
+                    PlayerEquipment[1] = item;
                     break;
 
                 case ("Shield"):
-                    PlayerInventory[1] = item;
+                    Unequip(2);
+                    PlayerEquipment[2] = item;
                     break;
 
                 case ("Helmet"):
-                    PlayerInventory[2] = item;
+                    Unequip(3);
+                    PlayerEquipment[3] = item;
                     break;
 
                 case ("Chestplate"):
-                    PlayerInventory[3] = item;
+                    Unequip(4);
+                    PlayerEquipment[4] = item;
                     break;
 
                 case ("Gauntlet"):
-                    PlayerInventory[4] = item;
+                    Unequip(5);
+                    PlayerEquipment[5] = item;
                     break;
 
                 case ("Boots"):
-                    PlayerInventory[5] = item;
+                    Unequip(6);
+                    PlayerEquipment[6] = item;
                     break;
 
             }

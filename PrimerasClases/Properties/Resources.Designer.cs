@@ -63,6 +63,46 @@ namespace PrimerasClases.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Boots {
+            get {
+                object obj = ResourceManager.GetObject("Boots", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BootsIcon {
+            get {
+                object obj = ResourceManager.GetObject("BootsIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Chestplate {
+            get {
+                object obj = ResourceManager.GetObject("Chestplate", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ChestplateIcon {
+            get {
+                object obj = ResourceManager.GetObject("ChestplateIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Enemy {
             get {
                 object obj = ResourceManager.GetObject("Enemy", resourceCulture);
@@ -83,10 +123,80 @@ namespace PrimerasClases.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
         /// </summary>
-        internal static System.Drawing.Icon GauntletIcon {
+        internal static System.Drawing.Icon GauntletCursorIcon {
+            get {
+                object obj = ResourceManager.GetObject("GauntletCursorIcon", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap GauntletIcon {
             get {
                 object obj = ResourceManager.GetObject("GauntletIcon", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Gauntlets {
+            get {
+                object obj = ResourceManager.GetObject("Gauntlets", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Helmet {
+            get {
+                object obj = ResourceManager.GetObject("Helmet", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap HelmetIcon {
+            get {
+                object obj = ResourceManager.GetObject("HelmetIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap InventoryBackground {
+            get {
+                object obj = ResourceManager.GetObject("InventoryBackground", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MultiSlash {
+            get {
+                object obj = ResourceManager.GetObject("MultiSlash", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap OneHandedSword {
+            get {
+                object obj = ResourceManager.GetObject("OneHandedSword", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -101,12 +211,72 @@ namespace PrimerasClases.Properties {
         }
         
         /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Red_Xsvg {
+            get {
+                object obj = ResourceManager.GetObject("Red_Xsvg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Shield {
+            get {
+                object obj = ResourceManager.GetObject("Shield", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ShieldIcon {
+            get {
+                object obj = ResourceManager.GetObject("ShieldIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Slash {
+            get {
+                object obj = ResourceManager.GetObject("Slash", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Spiked_Shield {
+            get {
+                object obj = ResourceManager.GetObject("Spiked_Shield", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
         /// </summary>
-        internal static System.Drawing.Icon SwordIcon {
+        internal static System.Drawing.Icon SwordCursorIcon {
+            get {
+                object obj = ResourceManager.GetObject("SwordCursorIcon", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SwordIcon {
             get {
                 object obj = ResourceManager.GetObject("SwordIcon", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -116,6 +286,16 @@ namespace PrimerasClases.Properties {
         internal static System.Drawing.Bitmap TitleScreen {
             get {
                 object obj = ResourceManager.GetObject("TitleScreen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TwoHandedSwordIcon {
+            get {
+                object obj = ResourceManager.GetObject("TwoHandedSwordIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

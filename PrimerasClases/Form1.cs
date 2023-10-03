@@ -44,9 +44,10 @@ namespace PrimerasClases
         Equipment legendaryHelmet = new Equipment();
         Equipment legendaryShield = new Equipment();
         Equipment legendaryTwoHandedWeapon = new Equipment();
+        Inventory playerInventory = new Inventory();
 
-        Icon GauntletCursor = Resources.GauntletIcon;
-        Icon SwordCursor = Resources.SwordIcon;
+        Icon GauntletCursor = Resources.GauntletCursorIcon;
+        Icon SwordCursor = Resources.SwordCursorIcon;
 
 
         /*  private void GenerateEquipment(NameNewEquipment)    traté de hacer un método que creara un ítem desde el comienzo
@@ -128,6 +129,8 @@ namespace PrimerasClases
             lbPause.Parent = PicBox_FightBackground;
             Lb_Action.Parent = PicBox_FightBackground;
             Lb_Cooldown.Parent = PicBox_FightBackground;
+            Lb_ItemsEquiped.Parent = PicBox_InventoryBackground;
+            Lb_Bag.Parent = PicBox_InventoryBackground;
 
             PicBox_FightBackground.Visible = false;
             Bt_Exit.Visible = false;
@@ -164,6 +167,15 @@ namespace PrimerasClases
             Lb_Title.Visible = false;
             Lb_Turn.Text = "Wait until game begins";
             Lb_Turn.Location = new System.Drawing.Point(288, 18);
+
+            playerInventory.PickUp(basicWeapon);
+            playerInventory.PickUp(basicChestplate);
+            playerInventory.PickUp(basicGauntlet);
+            playerInventory.PickUp(basicBoots);
+            playerInventory.Equip(basicWeapon);
+            playerInventory.Equip(basicChestplate);
+            playerInventory.Equip(basicGauntlet);
+            playerInventory.Equip(basicBoots);
 
             player.Special_Cooldown = 2;
             player.IsTurn = true;
@@ -262,13 +274,13 @@ namespace PrimerasClases
             {
                 if (Battle)
                 {
+                    Bt_Attack.Visible = true;
+                    Bt_Defend.Visible = true;
+                    Bt_Dodge.Visible = true;
+                    Bt_Special.Visible = true;
+                    Lb_Cooldown.Visible = true;
                     TimerLoop.Enabled = true;
                 }
-                Bt_Attack.Visible = true;
-                Bt_Defend.Visible = true;
-                Bt_Dodge.Visible = true;
-                Bt_Special.Visible = true;
-                Lb_Cooldown.Visible = true;
                 lbPause.Visible = false;
                 Bt_Pause.Text = "Pause";
                 PauseOn = false;
@@ -283,6 +295,16 @@ namespace PrimerasClases
                 "Special: Strong attack. Does more damage than basic attack, so it has cooldown\n\r" + "\n\r" +
                 "Move cursor over action buttons to see the stats.",
                 "Game Instructions");
+        }
+
+        private void Bt_HelpInv_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Here you can see the items you've obtained and you have equipped\n\r" +
+                "If the item has a rosy brown color, it is common;\n\rif sky blue, is rare; \n\r" +
+                "and if it is orange, then it is legendary.\n\r" +
+                "You can only equip 1 type of item at a time, also Two-handed swords cannot be used\n\r" +
+                "with shields.",
+               "Inventory Instructions");
         }
 
         #region Action Buttons
@@ -456,6 +478,232 @@ namespace PrimerasClases
 
         private async void MyTimer_Tick(object sender, EventArgs e)
         {
+            for (int i = 0; i < 11; i++)
+            {
+                var PicBox = PicBox_TitleScreen;
+                string Types;
+                string Rarities;
+                string name;
+                if (playerInventory.PlayerInventory[i] == null) 
+                {
+                    Types = string.Empty;
+                    Rarities = string.Empty;
+                    name = string.Empty;
+                }
+                else
+                {
+                    Types = playerInventory.PlayerInventory[i].Type;
+                    Rarities = playerInventory.PlayerInventory[i].Rarity;
+                    name = playerInventory.PlayerInventory[i].Name;
+                }
+                switch (i)
+                {
+                    case (0):
+                        PicBox = PicBox_BagSlot0;
+                        break;
+                    case (1):
+                        PicBox = PicBox_BagSlot1;
+                        break;
+                    case (2):
+                        PicBox = PicBox_BagSlot2;
+                        break;
+                    case (3):
+                        PicBox = PicBox_BagSlot3;
+                        break;
+                    case (4):
+                        PicBox = PicBox_BagSlot4;
+                        break;
+                    case (5):
+                        PicBox = PicBox_BagSlot5;
+                        break;
+                    case (6):
+                        PicBox = PicBox_BagSlot6;
+                        break;
+                    case (7):
+                        PicBox = PicBox_BagSlot7;
+                        break;
+                    case (8):
+                        PicBox = PicBox_BagSlot8;
+                        break;
+                    case (9):
+                        PicBox = PicBox_BagSlot9;
+                        break;
+                    case (10):
+                        PicBox = PicBox_BagSlot10;
+                        break;
+                    case (11):
+                        PicBox = PicBox_BagSlot11;
+                        break;
+                }
+                switch (Types)
+                {
+                    case ("Two-Handed Weapon"):
+                        PicBox.Image = Resources.Zweihander;
+                        break;
+                    case ("One-Handed Weapon"):
+                        PicBox.Image = Resources.OneHandedSword;
+                        break;
+                    case ("Shield"):
+                        switch (name)
+                        {
+                            case ("Spiked Shield"):
+                                PicBox.Image = Resources.Spiked_Shield;
+                                break;
+                            default:
+                                PicBox.Image = Resources.Shield;
+                                break;
+                        }
+                        break;
+                    case ("Helmet"):
+                        PicBox.Image = Resources.Helmet;
+                        break;
+                    case ("Chestplate"):
+                        PicBox.Image = Resources.Chestplate;
+                        break;
+                    case ("Gauntlet"):
+                        PicBox.Image = Resources.Gauntlets;
+                        break;
+                    case ("Boots"):
+                        PicBox.Image = Resources.Boots;
+                        break;
+                    default:
+                        PicBox.Image = null;
+                        break;
+                }
+                switch (Rarities)
+                {
+                    case ("common"):
+                        PicBox.BackColor = Color.RosyBrown;
+                        break;
+                    case ("rare"):
+                        PicBox.BackColor = Color.DeepSkyBlue;
+                        break;
+                    case ("legendary"):
+                        PicBox.BackColor = Color.Orange;
+                        break;
+                    default:
+                        PicBox.BackColor = Color.LightGray;
+                        break;
+                }
+            }
+            for (int i = 0; i < 7; i++)
+            {
+                var PicBox = PicBox_TitleScreen;
+                string Types;
+                string Rarities;
+                string name;
+                if (playerInventory.PlayerEquipment[i] == null)
+                {
+                    Types = string.Empty;
+                    Rarities = string.Empty;
+                    name = string.Empty;
+                }
+                else
+                {
+                    Types = playerInventory.PlayerEquipment[i].Type;
+                    Rarities = playerInventory.PlayerEquipment[i].Rarity;
+                    name = playerInventory.PlayerEquipment[i].Name;
+                }
+                switch (i)
+                {
+                    case (0):
+                        PicBox = PicBox_THWeaponSlot;
+                        break;
+                    case (1):
+                        PicBox = PicBox_WeaponSlot;
+                        break;
+                    case (2):
+                        PicBox = PicBox_ShieldSlot;
+                        break;
+                    case (3):
+                        PicBox = PicBox_HelmetSlot;
+                        break;
+                    case (4):
+                        PicBox = PicBox_ChestplateSlot;
+                        break;
+                    case (5):
+                        PicBox = PicBox_GauntletSlot;
+                        break;
+                    case (6):
+                        PicBox = PicBox_BootsSlot;
+                        break;
+                }
+                switch (Types)
+                {
+                    case ("Two-Handed Weapon"):
+                        PicBox_THWeaponSlot.Image = Resources.Zweihander;
+
+                        break;
+                    case ("One-Handed Weapon"):
+                        PicBox_WeaponSlot.Image = Resources.OneHandedSword;
+                        break;
+                    case ("Shield"):
+                        switch (name)
+                        {
+                            case ("Spiked Shield"):
+                                PicBox_ShieldSlot.Image = Resources.Spiked_Shield;
+                                break;
+                            default:
+                                PicBox_ShieldSlot.Image = Resources.Shield;
+                                break;
+                        }
+                        break;
+                    case ("Helmet"):
+                        PicBox_HelmetSlot.Image = Resources.Helmet;
+                        break;
+                    case ("Chestplate"):
+                        PicBox_ChestplateSlot.Image = Resources.Chestplate;
+                        break;
+                    case ("Gauntlet"):
+                        PicBox_GauntletSlot.Image = Resources.Gauntlets;
+                        break;
+                    case ("Boots"):
+                        PicBox_BootsSlot.Image = Resources.Boots;
+                        break;
+                    default:
+                        switch (i)
+                        {
+                            case (0):
+                                PicBox.Image = Resources.TwoHandedSwordIcon;
+                                break;
+                            case (1):
+                                PicBox.Image = Resources.SwordIcon;
+                                break;
+                            case (2):
+                                PicBox.Image = Resources.ShieldIcon;
+                                break;
+                            case (3):
+                                PicBox.Image = Resources.HelmetIcon;
+                                break;
+                            case (4):
+                                PicBox.Image = Resources.ChestplateIcon;
+                                break;
+                            case (5):
+                                PicBox.Image = Resources.GauntletIcon;
+                                break;
+                            case (6):
+                                PicBox.Image = Resources.BootsIcon;
+                                break;
+                        }
+                        break;
+                }
+                switch (Rarities)
+                {
+                    case ("common"):
+                        PicBox.BackColor = Color.RosyBrown;
+                        break;
+                    case ("rare"):
+                        PicBox.BackColor = Color.DeepSkyBlue;
+                        break;
+                    case ("legendary"):
+                        PicBox.BackColor = Color.Orange;
+                        break;
+                    default:
+                        PicBox.BackColor = Color.LightGray;
+                        break;
+                }
+            }
+
             if (player.IsTurn && Lb_Action.Visible == false && GrBox_Inventory.Visible == false)
             {
                 Bt_Attack.Visible = true;
@@ -687,8 +935,9 @@ namespace PrimerasClases
                 if ((player.Level - LastLevel) > 0)
                 {
                     MessageBox.Show("You leveled up " + (player.Level - LastLevel).ToString() + " levels!\n\r" +
-                        "Exp: " + player.Exp.ToString() + "/" + (player.Exp + (60 * (1.0 + (LastLevel - 1 / 5.0)))).ToString(),
+                        "Exp: " + player.Exp.ToString() + "/" + ((80 * (player.Level - 1)) + (60 * (1.0 + (LastLevel - 1 / 5.0)))).ToString(),
                         "Level Up");
+                    //First Level Up should say "Exp: 80/188". 80 can variate since it is not a constant, it is actual Exp of the player.
                 }
             }
 
