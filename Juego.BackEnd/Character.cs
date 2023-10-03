@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.Remoting.Activation;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Juego.BackEnd
 {
@@ -21,6 +22,7 @@ namespace Juego.BackEnd
         public bool Dodging { get; set; } = false;
         public int Special_Damage { get; set; } = 14;
         public int Special_Cooldown { get; set; } = 3;
+        public int Thorns { get; set; } = 0;
         public bool Alive { get; set; } = true;
         public bool IsTurn { get; set; } = false;
 

@@ -81,12 +81,12 @@ namespace PrimerasClases.Properties {
         }
         
         /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        ///   Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
         /// </summary>
-        internal static System.Drawing.Bitmap Player {
+        internal static System.Drawing.Icon GauntletIcon {
             get {
-                object obj = ResourceManager.GetObject("Player", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                object obj = ResourceManager.GetObject("GauntletIcon", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
             }
         }
         
@@ -101,22 +101,12 @@ namespace PrimerasClases.Properties {
         }
         
         /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        ///   Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
         /// </summary>
-        internal static System.Drawing.Bitmap Player_Alt2 {
+        internal static System.Drawing.Icon SwordIcon {
             get {
-                object obj = ResourceManager.GetObject("Player_Alt2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Player1 {
-            get {
-                object obj = ResourceManager.GetObject("Player1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                object obj = ResourceManager.GetObject("SwordIcon", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
             }
         }
         
@@ -126,6 +116,16 @@ namespace PrimerasClases.Properties {
         internal static System.Drawing.Bitmap TitleScreen {
             get {
                 object obj = ResourceManager.GetObject("TitleScreen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Zweihander {
+            get {
+                object obj = ResourceManager.GetObject("Zweihander", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

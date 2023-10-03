@@ -42,22 +42,66 @@
             this.Bt_Help = new System.Windows.Forms.Button();
             this.ProBar_HP_Player = new System.Windows.Forms.ProgressBar();
             this.ProBar_HP_Enemy = new System.Windows.Forms.ProgressBar();
-            this.Bt_Play = new System.Windows.Forms.Button();
             this.Lb_Title = new System.Windows.Forms.Label();
             this.ToolTip = new System.Windows.Forms.ToolTip(this.components);
             this.TimerLoop = new System.Windows.Forms.Timer(this.components);
             this.Lb_Action = new System.Windows.Forms.Label();
             this.Lb_Turn2 = new System.Windows.Forms.Label();
             this.lbPause = new System.Windows.Forms.Label();
-            this.Bt_Invenitory = new System.Windows.Forms.Button();
-            this.PicBox_FightBackground = new System.Windows.Forms.PictureBox();
-            this.PicBox_Player = new System.Windows.Forms.PictureBox();
+            this.Bt_Inventory = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.GrBox_Inventory = new System.Windows.Forms.GroupBox();
+            this.Bt_ExitGrBox = new System.Windows.Forms.Button();
+            this.PicBox_THWeaponSlot = new System.Windows.Forms.PictureBox();
+            this.Lb_ItemsEquiped = new System.Windows.Forms.Label();
+            this.Lb_Bag = new System.Windows.Forms.Label();
+            this.PicBox_BootsSlot = new System.Windows.Forms.PictureBox();
+            this.PicBox_GauntletSlot = new System.Windows.Forms.PictureBox();
+            this.PicBox_ShieldSlot = new System.Windows.Forms.PictureBox();
+            this.PicBox_WeaponSlot = new System.Windows.Forms.PictureBox();
+            this.PicBox_ChestplateSlot = new System.Windows.Forms.PictureBox();
+            this.PicBox_HelmetSlot = new System.Windows.Forms.PictureBox();
+            this.PicBox_BagSlot4 = new System.Windows.Forms.PictureBox();
+            this.PicBox_BagSlot3 = new System.Windows.Forms.PictureBox();
+            this.PicBox_BagSlot2 = new System.Windows.Forms.PictureBox();
+            this.PicBox_BagSlot1 = new System.Windows.Forms.PictureBox();
+            this.PicBox_BagSlot8 = new System.Windows.Forms.PictureBox();
+            this.PicBox_BagSlot7 = new System.Windows.Forms.PictureBox();
+            this.PicBox_BagSlot6 = new System.Windows.Forms.PictureBox();
+            this.PicBox_BagSlot5 = new System.Windows.Forms.PictureBox();
+            this.PicBox_BagSlot9 = new System.Windows.Forms.PictureBox();
+            this.PicBox_BagSlot10 = new System.Windows.Forms.PictureBox();
+            this.PicBox_BagSlot11 = new System.Windows.Forms.PictureBox();
+            this.PicBox_BagSlot12 = new System.Windows.Forms.PictureBox();
             this.PicBox_Enemy = new System.Windows.Forms.PictureBox();
             this.PicBox_TitleScreen = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.PicBox_FightBackground)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PicBox_Player)).BeginInit();
+            this.PicBox_FightBackground = new System.Windows.Forms.PictureBox();
+            this.PicBox_Player = new System.Windows.Forms.PictureBox();
+            this.GrBox_Inventory.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PicBox_THWeaponSlot)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicBox_BootsSlot)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicBox_GauntletSlot)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicBox_ShieldSlot)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicBox_WeaponSlot)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicBox_ChestplateSlot)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicBox_HelmetSlot)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicBox_BagSlot4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicBox_BagSlot3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicBox_BagSlot2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicBox_BagSlot1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicBox_BagSlot8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicBox_BagSlot7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicBox_BagSlot6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicBox_BagSlot5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicBox_BagSlot9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicBox_BagSlot10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicBox_BagSlot11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicBox_BagSlot12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicBox_Enemy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicBox_TitleScreen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicBox_FightBackground)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicBox_Player)).BeginInit();
             this.SuspendLayout();
             // 
             // Bt_Attack
@@ -220,30 +264,18 @@
             this.ProBar_HP_Enemy.Size = new System.Drawing.Size(237, 17);
             this.ProBar_HP_Enemy.TabIndex = 15;
             // 
-            // Bt_Play
-            // 
-            this.Bt_Play.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Bt_Play.Location = new System.Drawing.Point(434, 294);
-            this.Bt_Play.Margin = new System.Windows.Forms.Padding(4);
-            this.Bt_Play.Name = "Bt_Play";
-            this.Bt_Play.Size = new System.Drawing.Size(175, 55);
-            this.Bt_Play.TabIndex = 18;
-            this.Bt_Play.Text = "Play";
-            this.Bt_Play.UseVisualStyleBackColor = true;
-            this.Bt_Play.Click += new System.EventHandler(this.Bt_Play_Click);
-            // 
             // Lb_Title
             // 
             this.Lb_Title.AutoSize = true;
             this.Lb_Title.BackColor = System.Drawing.Color.Transparent;
-            this.Lb_Title.Font = new System.Drawing.Font("Castellar", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lb_Title.ForeColor = System.Drawing.Color.Gold;
-            this.Lb_Title.Location = new System.Drawing.Point(390, 84);
+            this.Lb_Title.Font = new System.Drawing.Font("Castellar", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lb_Title.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.Lb_Title.Location = new System.Drawing.Point(513, 82);
             this.Lb_Title.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lb_Title.Name = "Lb_Title";
-            this.Lb_Title.Size = new System.Drawing.Size(281, 36);
+            this.Lb_Title.Size = new System.Drawing.Size(392, 41);
             this.Lb_Title.TabIndex = 19;
-            this.Lb_Title.Text = "GENERIC NAME";
+            this.Lb_Title.Text = "ARMORED KNIGHT";
             this.Lb_Title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // TimerLoop
@@ -288,41 +320,288 @@
             this.lbPause.TabIndex = 22;
             this.lbPause.Text = "Paused";
             // 
-            // Bt_Invenitory
+            // Bt_Inventory
             // 
-            this.Bt_Invenitory.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Bt_Invenitory.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Bt_Invenitory.Location = new System.Drawing.Point(48, 450);
-            this.Bt_Invenitory.Margin = new System.Windows.Forms.Padding(4);
-            this.Bt_Invenitory.Name = "Bt_Invenitory";
-            this.Bt_Invenitory.Size = new System.Drawing.Size(147, 55);
-            this.Bt_Invenitory.TabIndex = 23;
-            this.Bt_Invenitory.Text = "Inventory";
-            this.Bt_Invenitory.UseVisualStyleBackColor = true;
+            this.Bt_Inventory.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Bt_Inventory.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Bt_Inventory.Location = new System.Drawing.Point(48, 450);
+            this.Bt_Inventory.Margin = new System.Windows.Forms.Padding(4);
+            this.Bt_Inventory.Name = "Bt_Inventory";
+            this.Bt_Inventory.Size = new System.Drawing.Size(147, 55);
+            this.Bt_Inventory.TabIndex = 23;
+            this.Bt_Inventory.Text = "Inventory";
+            this.Bt_Inventory.UseVisualStyleBackColor = true;
+            this.Bt_Inventory.Click += new System.EventHandler(this.Bt_Invenitory_Click);
             // 
-            // PicBox_FightBackground
+            // label1
             // 
-            this.PicBox_FightBackground.BackColor = System.Drawing.Color.Transparent;
-            this.PicBox_FightBackground.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PicBox_FightBackground.Image = global::PrimerasClases.Properties.Resources.FightBackground;
-            this.PicBox_FightBackground.Location = new System.Drawing.Point(0, 0);
-            this.PicBox_FightBackground.Name = "PicBox_FightBackground";
-            this.PicBox_FightBackground.Size = new System.Drawing.Size(1067, 554);
-            this.PicBox_FightBackground.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PicBox_FightBackground.TabIndex = 25;
-            this.PicBox_FightBackground.TabStop = false;
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Castellar", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Teal;
+            this.label1.Location = new System.Drawing.Point(666, 131);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(116, 41);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "PLAY";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.label1.MouseLeave += new System.EventHandler(this.label1_MouseLeave);
+            this.label1.MouseHover += new System.EventHandler(this.label1_MouseHover);
             // 
-            // PicBox_Player
+            // label2
             // 
-            this.PicBox_Player.BackColor = System.Drawing.Color.Transparent;
-            this.PicBox_Player.Image = global::PrimerasClases.Properties.Resources.Player_Alt;
-            this.PicBox_Player.Location = new System.Drawing.Point(56, 89);
-            this.PicBox_Player.Margin = new System.Windows.Forms.Padding(4);
-            this.PicBox_Player.Name = "PicBox_Player";
-            this.PicBox_Player.Size = new System.Drawing.Size(237, 342);
-            this.PicBox_Player.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PicBox_Player.TabIndex = 16;
-            this.PicBox_Player.TabStop = false;
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Castellar", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Teal;
+            this.label2.Location = new System.Drawing.Point(672, 178);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(105, 41);
+            this.label2.TabIndex = 27;
+            this.label2.Text = "EXIT";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.label2.MouseLeave += new System.EventHandler(this.label2_MouseLeave);
+            this.label2.MouseHover += new System.EventHandler(this.label2_MouseHover);
+            // 
+            // GrBox_Inventory
+            // 
+            this.GrBox_Inventory.BackColor = System.Drawing.Color.DarkRed;
+            this.GrBox_Inventory.Controls.Add(this.Bt_ExitGrBox);
+            this.GrBox_Inventory.Controls.Add(this.PicBox_THWeaponSlot);
+            this.GrBox_Inventory.Controls.Add(this.Lb_ItemsEquiped);
+            this.GrBox_Inventory.Controls.Add(this.Lb_Bag);
+            this.GrBox_Inventory.Controls.Add(this.PicBox_BootsSlot);
+            this.GrBox_Inventory.Controls.Add(this.PicBox_GauntletSlot);
+            this.GrBox_Inventory.Controls.Add(this.PicBox_ShieldSlot);
+            this.GrBox_Inventory.Controls.Add(this.PicBox_WeaponSlot);
+            this.GrBox_Inventory.Controls.Add(this.PicBox_ChestplateSlot);
+            this.GrBox_Inventory.Controls.Add(this.PicBox_HelmetSlot);
+            this.GrBox_Inventory.Controls.Add(this.PicBox_BagSlot4);
+            this.GrBox_Inventory.Controls.Add(this.PicBox_BagSlot3);
+            this.GrBox_Inventory.Controls.Add(this.PicBox_BagSlot2);
+            this.GrBox_Inventory.Controls.Add(this.PicBox_BagSlot1);
+            this.GrBox_Inventory.Controls.Add(this.PicBox_BagSlot8);
+            this.GrBox_Inventory.Controls.Add(this.PicBox_BagSlot7);
+            this.GrBox_Inventory.Controls.Add(this.PicBox_BagSlot6);
+            this.GrBox_Inventory.Controls.Add(this.PicBox_BagSlot5);
+            this.GrBox_Inventory.Controls.Add(this.PicBox_BagSlot9);
+            this.GrBox_Inventory.Controls.Add(this.PicBox_BagSlot10);
+            this.GrBox_Inventory.Controls.Add(this.PicBox_BagSlot11);
+            this.GrBox_Inventory.Controls.Add(this.PicBox_BagSlot12);
+            this.GrBox_Inventory.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GrBox_Inventory.ForeColor = System.Drawing.Color.White;
+            this.GrBox_Inventory.Location = new System.Drawing.Point(189, 36);
+            this.GrBox_Inventory.Name = "GrBox_Inventory";
+            this.GrBox_Inventory.Size = new System.Drawing.Size(670, 458);
+            this.GrBox_Inventory.TabIndex = 28;
+            this.GrBox_Inventory.TabStop = false;
+            this.GrBox_Inventory.Text = "INVENTORY";
+            this.GrBox_Inventory.Visible = false;
+            // 
+            // Bt_ExitGrBox
+            // 
+            this.Bt_ExitGrBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Bt_ExitGrBox.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Bt_ExitGrBox.Location = new System.Drawing.Point(624, 23);
+            this.Bt_ExitGrBox.Name = "Bt_ExitGrBox";
+            this.Bt_ExitGrBox.Size = new System.Drawing.Size(29, 30);
+            this.Bt_ExitGrBox.TabIndex = 22;
+            this.Bt_ExitGrBox.UseVisualStyleBackColor = true;
+            this.Bt_ExitGrBox.Click += new System.EventHandler(this.Bt_ExitGrBox_Click);
+            // 
+            // PicBox_THWeaponSlot
+            // 
+            this.PicBox_THWeaponSlot.BackColor = System.Drawing.Color.LightGray;
+            this.PicBox_THWeaponSlot.Location = new System.Drawing.Point(11, 112);
+            this.PicBox_THWeaponSlot.Name = "PicBox_THWeaponSlot";
+            this.PicBox_THWeaponSlot.Size = new System.Drawing.Size(124, 77);
+            this.PicBox_THWeaponSlot.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PicBox_THWeaponSlot.TabIndex = 20;
+            this.PicBox_THWeaponSlot.TabStop = false;
+            // 
+            // Lb_ItemsEquiped
+            // 
+            this.Lb_ItemsEquiped.AutoSize = true;
+            this.Lb_ItemsEquiped.Location = new System.Drawing.Point(3, 78);
+            this.Lb_ItemsEquiped.Name = "Lb_ItemsEquiped";
+            this.Lb_ItemsEquiped.Size = new System.Drawing.Size(227, 31);
+            this.Lb_ItemsEquiped.TabIndex = 19;
+            this.Lb_ItemsEquiped.Text = "ITEMS EQUIPED";
+            // 
+            // Lb_Bag
+            // 
+            this.Lb_Bag.AutoSize = true;
+            this.Lb_Bag.Location = new System.Drawing.Point(-1, 273);
+            this.Lb_Bag.Name = "Lb_Bag";
+            this.Lb_Bag.Size = new System.Drawing.Size(157, 31);
+            this.Lb_Bag.TabIndex = 18;
+            this.Lb_Bag.Text = "YOUR BAG";
+            // 
+            // PicBox_BootsSlot
+            // 
+            this.PicBox_BootsSlot.BackColor = System.Drawing.Color.LightGray;
+            this.PicBox_BootsSlot.Location = new System.Drawing.Point(576, 112);
+            this.PicBox_BootsSlot.Name = "PicBox_BootsSlot";
+            this.PicBox_BootsSlot.Size = new System.Drawing.Size(77, 77);
+            this.PicBox_BootsSlot.TabIndex = 17;
+            this.PicBox_BootsSlot.TabStop = false;
+            // 
+            // PicBox_GauntletSlot
+            // 
+            this.PicBox_GauntletSlot.BackColor = System.Drawing.Color.LightGray;
+            this.PicBox_GauntletSlot.Location = new System.Drawing.Point(491, 112);
+            this.PicBox_GauntletSlot.Name = "PicBox_GauntletSlot";
+            this.PicBox_GauntletSlot.Size = new System.Drawing.Size(77, 77);
+            this.PicBox_GauntletSlot.TabIndex = 16;
+            this.PicBox_GauntletSlot.TabStop = false;
+            // 
+            // PicBox_ShieldSlot
+            // 
+            this.PicBox_ShieldSlot.BackColor = System.Drawing.Color.LightGray;
+            this.PicBox_ShieldSlot.Location = new System.Drawing.Point(233, 112);
+            this.PicBox_ShieldSlot.Name = "PicBox_ShieldSlot";
+            this.PicBox_ShieldSlot.Size = new System.Drawing.Size(77, 77);
+            this.PicBox_ShieldSlot.TabIndex = 15;
+            this.PicBox_ShieldSlot.TabStop = false;
+            // 
+            // PicBox_WeaponSlot
+            // 
+            this.PicBox_WeaponSlot.BackColor = System.Drawing.Color.LightGray;
+            this.PicBox_WeaponSlot.Location = new System.Drawing.Point(147, 112);
+            this.PicBox_WeaponSlot.Name = "PicBox_WeaponSlot";
+            this.PicBox_WeaponSlot.Size = new System.Drawing.Size(77, 77);
+            this.PicBox_WeaponSlot.TabIndex = 14;
+            this.PicBox_WeaponSlot.TabStop = false;
+            // 
+            // PicBox_ChestplateSlot
+            // 
+            this.PicBox_ChestplateSlot.BackColor = System.Drawing.Color.LightGray;
+            this.PicBox_ChestplateSlot.Location = new System.Drawing.Point(406, 112);
+            this.PicBox_ChestplateSlot.Name = "PicBox_ChestplateSlot";
+            this.PicBox_ChestplateSlot.Size = new System.Drawing.Size(77, 77);
+            this.PicBox_ChestplateSlot.TabIndex = 13;
+            this.PicBox_ChestplateSlot.TabStop = false;
+            // 
+            // PicBox_HelmetSlot
+            // 
+            this.PicBox_HelmetSlot.BackColor = System.Drawing.Color.LightGray;
+            this.PicBox_HelmetSlot.Location = new System.Drawing.Point(320, 112);
+            this.PicBox_HelmetSlot.Name = "PicBox_HelmetSlot";
+            this.PicBox_HelmetSlot.Size = new System.Drawing.Size(77, 77);
+            this.PicBox_HelmetSlot.TabIndex = 12;
+            this.PicBox_HelmetSlot.TabStop = false;
+            // 
+            // PicBox_BagSlot4
+            // 
+            this.PicBox_BagSlot4.BackColor = System.Drawing.Color.LightGray;
+            this.PicBox_BagSlot4.Location = new System.Drawing.Point(236, 307);
+            this.PicBox_BagSlot4.Name = "PicBox_BagSlot4";
+            this.PicBox_BagSlot4.Size = new System.Drawing.Size(69, 66);
+            this.PicBox_BagSlot4.TabIndex = 11;
+            this.PicBox_BagSlot4.TabStop = false;
+            // 
+            // PicBox_BagSlot3
+            // 
+            this.PicBox_BagSlot3.BackColor = System.Drawing.Color.LightGray;
+            this.PicBox_BagSlot3.Location = new System.Drawing.Point(161, 307);
+            this.PicBox_BagSlot3.Name = "PicBox_BagSlot3";
+            this.PicBox_BagSlot3.Size = new System.Drawing.Size(69, 66);
+            this.PicBox_BagSlot3.TabIndex = 10;
+            this.PicBox_BagSlot3.TabStop = false;
+            // 
+            // PicBox_BagSlot2
+            // 
+            this.PicBox_BagSlot2.BackColor = System.Drawing.Color.LightGray;
+            this.PicBox_BagSlot2.Location = new System.Drawing.Point(86, 307);
+            this.PicBox_BagSlot2.Name = "PicBox_BagSlot2";
+            this.PicBox_BagSlot2.Size = new System.Drawing.Size(69, 66);
+            this.PicBox_BagSlot2.TabIndex = 9;
+            this.PicBox_BagSlot2.TabStop = false;
+            // 
+            // PicBox_BagSlot1
+            // 
+            this.PicBox_BagSlot1.BackColor = System.Drawing.Color.LightGray;
+            this.PicBox_BagSlot1.Location = new System.Drawing.Point(11, 307);
+            this.PicBox_BagSlot1.Name = "PicBox_BagSlot1";
+            this.PicBox_BagSlot1.Size = new System.Drawing.Size(69, 66);
+            this.PicBox_BagSlot1.TabIndex = 8;
+            this.PicBox_BagSlot1.TabStop = false;
+            // 
+            // PicBox_BagSlot8
+            // 
+            this.PicBox_BagSlot8.BackColor = System.Drawing.Color.LightGray;
+            this.PicBox_BagSlot8.Location = new System.Drawing.Point(86, 379);
+            this.PicBox_BagSlot8.Name = "PicBox_BagSlot8";
+            this.PicBox_BagSlot8.Size = new System.Drawing.Size(69, 66);
+            this.PicBox_BagSlot8.TabIndex = 7;
+            this.PicBox_BagSlot8.TabStop = false;
+            // 
+            // PicBox_BagSlot7
+            // 
+            this.PicBox_BagSlot7.BackColor = System.Drawing.Color.LightGray;
+            this.PicBox_BagSlot7.Location = new System.Drawing.Point(11, 379);
+            this.PicBox_BagSlot7.Name = "PicBox_BagSlot7";
+            this.PicBox_BagSlot7.Size = new System.Drawing.Size(69, 66);
+            this.PicBox_BagSlot7.TabIndex = 6;
+            this.PicBox_BagSlot7.TabStop = false;
+            // 
+            // PicBox_BagSlot6
+            // 
+            this.PicBox_BagSlot6.BackColor = System.Drawing.Color.LightGray;
+            this.PicBox_BagSlot6.Location = new System.Drawing.Point(386, 307);
+            this.PicBox_BagSlot6.Name = "PicBox_BagSlot6";
+            this.PicBox_BagSlot6.Size = new System.Drawing.Size(69, 66);
+            this.PicBox_BagSlot6.TabIndex = 5;
+            this.PicBox_BagSlot6.TabStop = false;
+            // 
+            // PicBox_BagSlot5
+            // 
+            this.PicBox_BagSlot5.BackColor = System.Drawing.Color.LightGray;
+            this.PicBox_BagSlot5.Location = new System.Drawing.Point(311, 307);
+            this.PicBox_BagSlot5.Name = "PicBox_BagSlot5";
+            this.PicBox_BagSlot5.Size = new System.Drawing.Size(69, 66);
+            this.PicBox_BagSlot5.TabIndex = 4;
+            this.PicBox_BagSlot5.TabStop = false;
+            // 
+            // PicBox_BagSlot9
+            // 
+            this.PicBox_BagSlot9.BackColor = System.Drawing.Color.LightGray;
+            this.PicBox_BagSlot9.Location = new System.Drawing.Point(162, 379);
+            this.PicBox_BagSlot9.Name = "PicBox_BagSlot9";
+            this.PicBox_BagSlot9.Size = new System.Drawing.Size(69, 66);
+            this.PicBox_BagSlot9.TabIndex = 3;
+            this.PicBox_BagSlot9.TabStop = false;
+            // 
+            // PicBox_BagSlot10
+            // 
+            this.PicBox_BagSlot10.BackColor = System.Drawing.Color.LightGray;
+            this.PicBox_BagSlot10.Location = new System.Drawing.Point(237, 379);
+            this.PicBox_BagSlot10.Name = "PicBox_BagSlot10";
+            this.PicBox_BagSlot10.Size = new System.Drawing.Size(69, 66);
+            this.PicBox_BagSlot10.TabIndex = 2;
+            this.PicBox_BagSlot10.TabStop = false;
+            // 
+            // PicBox_BagSlot11
+            // 
+            this.PicBox_BagSlot11.BackColor = System.Drawing.Color.LightGray;
+            this.PicBox_BagSlot11.Location = new System.Drawing.Point(312, 379);
+            this.PicBox_BagSlot11.Name = "PicBox_BagSlot11";
+            this.PicBox_BagSlot11.Size = new System.Drawing.Size(69, 66);
+            this.PicBox_BagSlot11.TabIndex = 1;
+            this.PicBox_BagSlot11.TabStop = false;
+            // 
+            // PicBox_BagSlot12
+            // 
+            this.PicBox_BagSlot12.BackColor = System.Drawing.Color.LightGray;
+            this.PicBox_BagSlot12.Location = new System.Drawing.Point(387, 379);
+            this.PicBox_BagSlot12.Name = "PicBox_BagSlot12";
+            this.PicBox_BagSlot12.Size = new System.Drawing.Size(69, 66);
+            this.PicBox_BagSlot12.TabIndex = 0;
+            this.PicBox_BagSlot12.TabStop = false;
             // 
             // PicBox_Enemy
             // 
@@ -349,17 +628,43 @@
             this.PicBox_TitleScreen.TabIndex = 24;
             this.PicBox_TitleScreen.TabStop = false;
             // 
+            // PicBox_FightBackground
+            // 
+            this.PicBox_FightBackground.BackColor = System.Drawing.Color.Transparent;
+            this.PicBox_FightBackground.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PicBox_FightBackground.Image = global::PrimerasClases.Properties.Resources.FightBackground;
+            this.PicBox_FightBackground.Location = new System.Drawing.Point(0, 0);
+            this.PicBox_FightBackground.Name = "PicBox_FightBackground";
+            this.PicBox_FightBackground.Size = new System.Drawing.Size(1067, 554);
+            this.PicBox_FightBackground.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PicBox_FightBackground.TabIndex = 25;
+            this.PicBox_FightBackground.TabStop = false;
+            // 
+            // PicBox_Player
+            // 
+            this.PicBox_Player.BackColor = System.Drawing.Color.Transparent;
+            this.PicBox_Player.Image = global::PrimerasClases.Properties.Resources.Player_Alt;
+            this.PicBox_Player.Location = new System.Drawing.Point(52, 69);
+            this.PicBox_Player.Margin = new System.Windows.Forms.Padding(4);
+            this.PicBox_Player.Name = "PicBox_Player";
+            this.PicBox_Player.Size = new System.Drawing.Size(243, 373);
+            this.PicBox_Player.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PicBox_Player.TabIndex = 29;
+            this.PicBox_Player.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.GrBox_Inventory);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.Lb_Title);
             this.Controls.Add(this.Lb_Action);
-            this.Controls.Add(this.Bt_Invenitory);
+            this.Controls.Add(this.Bt_Inventory);
             this.Controls.Add(this.lbPause);
             this.Controls.Add(this.Lb_Turn2);
-            this.Controls.Add(this.Bt_Play);
             this.Controls.Add(this.ProBar_HP_Enemy);
             this.Controls.Add(this.ProBar_HP_Player);
             this.Controls.Add(this.Bt_Help);
@@ -373,17 +678,38 @@
             this.Controls.Add(this.Bt_Defend);
             this.Controls.Add(this.Bt_Special);
             this.Controls.Add(this.Bt_Attack);
-            this.Controls.Add(this.PicBox_Player);
             this.Controls.Add(this.PicBox_Enemy);
             this.Controls.Add(this.PicBox_TitleScreen);
             this.Controls.Add(this.PicBox_FightBackground);
+            this.Controls.Add(this.PicBox_Player);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.PicBox_FightBackground)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PicBox_Player)).EndInit();
+            this.GrBox_Inventory.ResumeLayout(false);
+            this.GrBox_Inventory.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PicBox_THWeaponSlot)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicBox_BootsSlot)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicBox_GauntletSlot)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicBox_ShieldSlot)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicBox_WeaponSlot)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicBox_ChestplateSlot)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicBox_HelmetSlot)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicBox_BagSlot4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicBox_BagSlot3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicBox_BagSlot2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicBox_BagSlot1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicBox_BagSlot8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicBox_BagSlot7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicBox_BagSlot6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicBox_BagSlot5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicBox_BagSlot9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicBox_BagSlot10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicBox_BagSlot11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicBox_BagSlot12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicBox_Enemy)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicBox_TitleScreen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicBox_FightBackground)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicBox_Player)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -403,18 +729,42 @@
         private System.Windows.Forms.Button Bt_Help;
         private System.Windows.Forms.ProgressBar ProBar_HP_Player;
         private System.Windows.Forms.ProgressBar ProBar_HP_Enemy;
-        private System.Windows.Forms.PictureBox PicBox_Player;
         private System.Windows.Forms.PictureBox PicBox_Enemy;
-        private System.Windows.Forms.Button Bt_Play;
         private System.Windows.Forms.Label Lb_Title;
         private System.Windows.Forms.ToolTip ToolTip;
         private System.Windows.Forms.Timer TimerLoop;
         private System.Windows.Forms.Label Lb_Action;
         private System.Windows.Forms.Label Lb_Turn2;
         private System.Windows.Forms.Label lbPause;
-        private System.Windows.Forms.Button Bt_Invenitory;
+        private System.Windows.Forms.Button Bt_Inventory;
         private System.Windows.Forms.PictureBox PicBox_TitleScreen;
         private System.Windows.Forms.PictureBox PicBox_FightBackground;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.GroupBox GrBox_Inventory;
+        private System.Windows.Forms.PictureBox PicBox_BootsSlot;
+        private System.Windows.Forms.PictureBox PicBox_GauntletSlot;
+        private System.Windows.Forms.PictureBox PicBox_ShieldSlot;
+        private System.Windows.Forms.PictureBox PicBox_WeaponSlot;
+        private System.Windows.Forms.PictureBox PicBox_ChestplateSlot;
+        private System.Windows.Forms.PictureBox PicBox_HelmetSlot;
+        private System.Windows.Forms.PictureBox PicBox_BagSlot4;
+        private System.Windows.Forms.PictureBox PicBox_BagSlot3;
+        private System.Windows.Forms.PictureBox PicBox_BagSlot2;
+        private System.Windows.Forms.PictureBox PicBox_BagSlot1;
+        private System.Windows.Forms.PictureBox PicBox_BagSlot8;
+        private System.Windows.Forms.PictureBox PicBox_BagSlot7;
+        private System.Windows.Forms.PictureBox PicBox_BagSlot6;
+        private System.Windows.Forms.PictureBox PicBox_BagSlot5;
+        private System.Windows.Forms.PictureBox PicBox_BagSlot9;
+        private System.Windows.Forms.PictureBox PicBox_BagSlot10;
+        private System.Windows.Forms.PictureBox PicBox_BagSlot11;
+        private System.Windows.Forms.PictureBox PicBox_BagSlot12;
+        private System.Windows.Forms.Label Lb_ItemsEquiped;
+        private System.Windows.Forms.Label Lb_Bag;
+        private System.Windows.Forms.PictureBox PicBox_THWeaponSlot;
+        private System.Windows.Forms.Button Bt_ExitGrBox;
+        private System.Windows.Forms.PictureBox PicBox_Player;
     }
 }
 

@@ -65,18 +65,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -90,18 +90,21 @@
     <None Include="Resources\Enemy.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Player_Alt2.png" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\Juego.BackEnd\Juego.BackEnd.csproj">
       <Project>{b68d0d3b-529e-4189-8153-c0b2c281e4df}</Project>
       <Name>Juego.BackEnd</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\SwordIcon.ico" />
+    <None Include="Resources\Zweihander.png" />
     <None Include="Resources\FightBackground.jpg" />
+    <None Include="Resources\gauntlet.ico" />
     <Content Include="Resources\Player_Alt.png" />
     <None Include="Resources\TitleScreen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
