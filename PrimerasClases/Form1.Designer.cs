@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.Bt_Attack = new System.Windows.Forms.Button();
             this.Bt_Special = new System.Windows.Forms.Button();
             this.Bt_Defend = new System.Windows.Forms.Button();
@@ -52,6 +53,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.GrBox_Inventory = new System.Windows.Forms.GroupBox();
+            this.Lb_Thorns = new System.Windows.Forms.Label();
+            this.Lb_DodgeProb = new System.Windows.Forms.Label();
+            this.Lb_Armor = new System.Windows.Forms.Label();
+            this.Lb_Defense = new System.Windows.Forms.Label();
+            this.Lb_SpecialDamage = new System.Windows.Forms.Label();
+            this.Lb_Damage = new System.Windows.Forms.Label();
+            this.Bt_HelpInv = new System.Windows.Forms.Button();
             this.Bt_ExitGrBox = new System.Windows.Forms.Button();
             this.PicBox_THWeaponSlot = new System.Windows.Forms.PictureBox();
             this.Lb_ItemsEquiped = new System.Windows.Forms.Label();
@@ -79,7 +87,7 @@
             this.PicBox_TitleScreen = new System.Windows.Forms.PictureBox();
             this.PicBox_FightBackground = new System.Windows.Forms.PictureBox();
             this.PicBox_Player = new System.Windows.Forms.PictureBox();
-            this.Bt_HelpInv = new System.Windows.Forms.Button();
+            this.Timer2 = new System.Windows.Forms.Timer(this.components);
             this.GrBox_Inventory.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicBox_THWeaponSlot)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicBox_BootsSlot)).BeginInit();
@@ -283,7 +291,7 @@
             // 
             // TimerLoop
             // 
-            this.TimerLoop.Interval = 1500;
+            this.TimerLoop.Interval = 1000;
             this.TimerLoop.Tick += new System.EventHandler(this.MyTimer_Tick);
             // 
             // Lb_Action
@@ -373,6 +381,12 @@
             // GrBox_Inventory
             // 
             this.GrBox_Inventory.BackColor = System.Drawing.Color.DarkRed;
+            this.GrBox_Inventory.Controls.Add(this.Lb_Thorns);
+            this.GrBox_Inventory.Controls.Add(this.Lb_DodgeProb);
+            this.GrBox_Inventory.Controls.Add(this.Lb_Armor);
+            this.GrBox_Inventory.Controls.Add(this.Lb_Defense);
+            this.GrBox_Inventory.Controls.Add(this.Lb_SpecialDamage);
+            this.GrBox_Inventory.Controls.Add(this.Lb_Damage);
             this.GrBox_Inventory.Controls.Add(this.Bt_HelpInv);
             this.GrBox_Inventory.Controls.Add(this.Bt_ExitGrBox);
             this.GrBox_Inventory.Controls.Add(this.PicBox_THWeaponSlot);
@@ -401,18 +415,101 @@
             this.GrBox_Inventory.ForeColor = System.Drawing.Color.White;
             this.GrBox_Inventory.Location = new System.Drawing.Point(189, 36);
             this.GrBox_Inventory.Name = "GrBox_Inventory";
-            this.GrBox_Inventory.Size = new System.Drawing.Size(670, 458);
+            this.GrBox_Inventory.Size = new System.Drawing.Size(716, 494);
             this.GrBox_Inventory.TabIndex = 28;
             this.GrBox_Inventory.TabStop = false;
             this.GrBox_Inventory.Text = "INVENTORY";
             this.GrBox_Inventory.Visible = false;
+            // 
+            // Lb_Thorns
+            // 
+            this.Lb_Thorns.AutoSize = true;
+            this.Lb_Thorns.BackColor = System.Drawing.Color.Transparent;
+            this.Lb_Thorns.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lb_Thorns.ForeColor = System.Drawing.Color.Black;
+            this.Lb_Thorns.Location = new System.Drawing.Point(490, 419);
+            this.Lb_Thorns.Name = "Lb_Thorns";
+            this.Lb_Thorns.Size = new System.Drawing.Size(64, 25);
+            this.Lb_Thorns.TabIndex = 30;
+            this.Lb_Thorns.Text = "label4";
+            // 
+            // Lb_DodgeProb
+            // 
+            this.Lb_DodgeProb.AutoSize = true;
+            this.Lb_DodgeProb.BackColor = System.Drawing.Color.Transparent;
+            this.Lb_DodgeProb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lb_DodgeProb.ForeColor = System.Drawing.Color.Black;
+            this.Lb_DodgeProb.Location = new System.Drawing.Point(490, 379);
+            this.Lb_DodgeProb.Name = "Lb_DodgeProb";
+            this.Lb_DodgeProb.Size = new System.Drawing.Size(64, 25);
+            this.Lb_DodgeProb.TabIndex = 29;
+            this.Lb_DodgeProb.Text = "label4";
+            // 
+            // Lb_Armor
+            // 
+            this.Lb_Armor.AutoSize = true;
+            this.Lb_Armor.BackColor = System.Drawing.Color.Transparent;
+            this.Lb_Armor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lb_Armor.ForeColor = System.Drawing.Color.Black;
+            this.Lb_Armor.Location = new System.Drawing.Point(488, 296);
+            this.Lb_Armor.Name = "Lb_Armor";
+            this.Lb_Armor.Size = new System.Drawing.Size(64, 25);
+            this.Lb_Armor.TabIndex = 28;
+            this.Lb_Armor.Text = "label4";
+            // 
+            // Lb_Defense
+            // 
+            this.Lb_Defense.AutoSize = true;
+            this.Lb_Defense.BackColor = System.Drawing.Color.Transparent;
+            this.Lb_Defense.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lb_Defense.ForeColor = System.Drawing.Color.Black;
+            this.Lb_Defense.Location = new System.Drawing.Point(489, 338);
+            this.Lb_Defense.Name = "Lb_Defense";
+            this.Lb_Defense.Size = new System.Drawing.Size(64, 25);
+            this.Lb_Defense.TabIndex = 27;
+            this.Lb_Defense.Text = "label4";
+            // 
+            // Lb_SpecialDamage
+            // 
+            this.Lb_SpecialDamage.AutoSize = true;
+            this.Lb_SpecialDamage.BackColor = System.Drawing.Color.Transparent;
+            this.Lb_SpecialDamage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lb_SpecialDamage.ForeColor = System.Drawing.Color.Black;
+            this.Lb_SpecialDamage.Location = new System.Drawing.Point(487, 255);
+            this.Lb_SpecialDamage.Name = "Lb_SpecialDamage";
+            this.Lb_SpecialDamage.Size = new System.Drawing.Size(64, 25);
+            this.Lb_SpecialDamage.TabIndex = 26;
+            this.Lb_SpecialDamage.Text = "label3";
+            // 
+            // Lb_Damage
+            // 
+            this.Lb_Damage.AutoSize = true;
+            this.Lb_Damage.BackColor = System.Drawing.Color.Transparent;
+            this.Lb_Damage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lb_Damage.ForeColor = System.Drawing.Color.Black;
+            this.Lb_Damage.Location = new System.Drawing.Point(487, 214);
+            this.Lb_Damage.Name = "Lb_Damage";
+            this.Lb_Damage.Size = new System.Drawing.Size(64, 25);
+            this.Lb_Damage.TabIndex = 25;
+            this.Lb_Damage.Text = "label3";
+            // 
+            // Bt_HelpInv
+            // 
+            this.Bt_HelpInv.ForeColor = System.Drawing.Color.Black;
+            this.Bt_HelpInv.Location = new System.Drawing.Point(11, 13);
+            this.Bt_HelpInv.Name = "Bt_HelpInv";
+            this.Bt_HelpInv.Size = new System.Drawing.Size(112, 53);
+            this.Bt_HelpInv.TabIndex = 24;
+            this.Bt_HelpInv.Text = "Help";
+            this.Bt_HelpInv.UseVisualStyleBackColor = true;
+            this.Bt_HelpInv.Click += new System.EventHandler(this.Bt_HelpInv_Click);
             // 
             // Bt_ExitGrBox
             // 
             this.Bt_ExitGrBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Bt_ExitGrBox.ForeColor = System.Drawing.Color.Red;
             this.Bt_ExitGrBox.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.Bt_ExitGrBox.Location = new System.Drawing.Point(624, 23);
+            this.Bt_ExitGrBox.Location = new System.Drawing.Point(669, 13);
             this.Bt_ExitGrBox.Name = "Bt_ExitGrBox";
             this.Bt_ExitGrBox.Size = new System.Drawing.Size(29, 30);
             this.Bt_ExitGrBox.TabIndex = 22;
@@ -429,6 +526,7 @@
             this.PicBox_THWeaponSlot.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PicBox_THWeaponSlot.TabIndex = 20;
             this.PicBox_THWeaponSlot.TabStop = false;
+            this.PicBox_THWeaponSlot.DoubleClick += new System.EventHandler(this.PicBox_THWeaponSlot_DoubleClick);
             // 
             // Lb_ItemsEquiped
             // 
@@ -463,6 +561,7 @@
             this.PicBox_BootsSlot.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PicBox_BootsSlot.TabIndex = 17;
             this.PicBox_BootsSlot.TabStop = false;
+            this.PicBox_BootsSlot.DoubleClick += new System.EventHandler(this.PicBox_BootsSlot_DoubleClick);
             // 
             // PicBox_GauntletSlot
             // 
@@ -473,6 +572,7 @@
             this.PicBox_GauntletSlot.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PicBox_GauntletSlot.TabIndex = 16;
             this.PicBox_GauntletSlot.TabStop = false;
+            this.PicBox_GauntletSlot.DoubleClick += new System.EventHandler(this.PicBox_GauntletSlot_DoubleClick);
             // 
             // PicBox_ShieldSlot
             // 
@@ -483,6 +583,7 @@
             this.PicBox_ShieldSlot.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PicBox_ShieldSlot.TabIndex = 15;
             this.PicBox_ShieldSlot.TabStop = false;
+            this.PicBox_ShieldSlot.DoubleClick += new System.EventHandler(this.PicBox_ShieldSlot_DoubleClick);
             // 
             // PicBox_WeaponSlot
             // 
@@ -493,6 +594,7 @@
             this.PicBox_WeaponSlot.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PicBox_WeaponSlot.TabIndex = 14;
             this.PicBox_WeaponSlot.TabStop = false;
+            this.PicBox_WeaponSlot.DoubleClick += new System.EventHandler(this.PicBox_WeaponSlot_DoubleClick);
             // 
             // PicBox_ChestplateSlot
             // 
@@ -503,6 +605,7 @@
             this.PicBox_ChestplateSlot.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PicBox_ChestplateSlot.TabIndex = 13;
             this.PicBox_ChestplateSlot.TabStop = false;
+            this.PicBox_ChestplateSlot.DoubleClick += new System.EventHandler(this.PicBox_ChestplateSlot_DoubleClick);
             // 
             // PicBox_HelmetSlot
             // 
@@ -514,6 +617,7 @@
             this.PicBox_HelmetSlot.TabIndex = 12;
             this.PicBox_HelmetSlot.TabStop = false;
             this.PicBox_HelmetSlot.WaitOnLoad = true;
+            this.PicBox_HelmetSlot.DoubleClick += new System.EventHandler(this.PicBox_HelmetSlot_DoubleClick);
             // 
             // PicBox_BagSlot3
             // 
@@ -524,6 +628,7 @@
             this.PicBox_BagSlot3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PicBox_BagSlot3.TabIndex = 11;
             this.PicBox_BagSlot3.TabStop = false;
+            this.PicBox_BagSlot3.DoubleClick += new System.EventHandler(this.PicBox_BagSlot3_DoubleClick);
             // 
             // PicBox_BagSlot2
             // 
@@ -534,6 +639,7 @@
             this.PicBox_BagSlot2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PicBox_BagSlot2.TabIndex = 10;
             this.PicBox_BagSlot2.TabStop = false;
+            this.PicBox_BagSlot2.DoubleClick += new System.EventHandler(this.PicBox_BagSlot2_DoubleClick);
             // 
             // PicBox_BagSlot1
             // 
@@ -544,16 +650,18 @@
             this.PicBox_BagSlot1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PicBox_BagSlot1.TabIndex = 9;
             this.PicBox_BagSlot1.TabStop = false;
+            this.PicBox_BagSlot1.DoubleClick += new System.EventHandler(this.PicBox_BagSlot1_DoubleClick);
             // 
             // PicBox_BagSlot0
             // 
             this.PicBox_BagSlot0.BackColor = System.Drawing.Color.LightGray;
-            this.PicBox_BagSlot0.Location = new System.Drawing.Point(37, 307);
+            this.PicBox_BagSlot0.Location = new System.Drawing.Point(38, 307);
             this.PicBox_BagSlot0.Name = "PicBox_BagSlot0";
             this.PicBox_BagSlot0.Size = new System.Drawing.Size(69, 66);
             this.PicBox_BagSlot0.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PicBox_BagSlot0.TabIndex = 8;
             this.PicBox_BagSlot0.TabStop = false;
+            this.PicBox_BagSlot0.DoubleClick += new System.EventHandler(this.PicBox_BagSlot0_DoubleClick);
             // 
             // PicBox_BagSlot7
             // 
@@ -564,16 +672,18 @@
             this.PicBox_BagSlot7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PicBox_BagSlot7.TabIndex = 7;
             this.PicBox_BagSlot7.TabStop = false;
+            this.PicBox_BagSlot7.DoubleClick += new System.EventHandler(this.PicBox_BagSlot7_DoubleClick);
             // 
             // PicBox_BagSlot6
             // 
             this.PicBox_BagSlot6.BackColor = System.Drawing.Color.LightGray;
-            this.PicBox_BagSlot6.Location = new System.Drawing.Point(35, 379);
+            this.PicBox_BagSlot6.Location = new System.Drawing.Point(38, 379);
             this.PicBox_BagSlot6.Name = "PicBox_BagSlot6";
             this.PicBox_BagSlot6.Size = new System.Drawing.Size(69, 66);
             this.PicBox_BagSlot6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PicBox_BagSlot6.TabIndex = 6;
             this.PicBox_BagSlot6.TabStop = false;
+            this.PicBox_BagSlot6.DoubleClick += new System.EventHandler(this.PicBox_BagSlot6_DoubleClick);
             // 
             // PicBox_BagSlot5
             // 
@@ -584,6 +694,7 @@
             this.PicBox_BagSlot5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PicBox_BagSlot5.TabIndex = 5;
             this.PicBox_BagSlot5.TabStop = false;
+            this.PicBox_BagSlot5.DoubleClick += new System.EventHandler(this.PicBox_BagSlot5_DoubleClick);
             // 
             // PicBox_BagSlot4
             // 
@@ -594,6 +705,7 @@
             this.PicBox_BagSlot4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PicBox_BagSlot4.TabIndex = 4;
             this.PicBox_BagSlot4.TabStop = false;
+            this.PicBox_BagSlot4.DoubleClick += new System.EventHandler(this.PicBox_BagSlot4_DoubleClick);
             // 
             // PicBox_BagSlot8
             // 
@@ -604,6 +716,7 @@
             this.PicBox_BagSlot8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PicBox_BagSlot8.TabIndex = 3;
             this.PicBox_BagSlot8.TabStop = false;
+            this.PicBox_BagSlot8.DoubleClick += new System.EventHandler(this.PicBox_BagSlot8_DoubleClick);
             // 
             // PicBox_BagSlot9
             // 
@@ -614,6 +727,7 @@
             this.PicBox_BagSlot9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PicBox_BagSlot9.TabIndex = 2;
             this.PicBox_BagSlot9.TabStop = false;
+            this.PicBox_BagSlot9.DoubleClick += new System.EventHandler(this.PicBox_BagSlot9_DoubleClick);
             // 
             // PicBox_BagSlot10
             // 
@@ -624,6 +738,7 @@
             this.PicBox_BagSlot10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PicBox_BagSlot10.TabIndex = 1;
             this.PicBox_BagSlot10.TabStop = false;
+            this.PicBox_BagSlot10.DoubleClick += new System.EventHandler(this.PicBox_BagSlot10_DoubleClick);
             // 
             // PicBox_BagSlot11
             // 
@@ -634,13 +749,14 @@
             this.PicBox_BagSlot11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PicBox_BagSlot11.TabIndex = 0;
             this.PicBox_BagSlot11.TabStop = false;
+            this.PicBox_BagSlot11.DoubleClick += new System.EventHandler(this.PicBox_BagSlot11_DoubleClick);
             // 
             // PicBox_InventoryBackground
             // 
             this.PicBox_InventoryBackground.Image = global::PrimerasClases.Properties.Resources.InventoryBackground;
             this.PicBox_InventoryBackground.Location = new System.Drawing.Point(-8, -3);
             this.PicBox_InventoryBackground.Name = "PicBox_InventoryBackground";
-            this.PicBox_InventoryBackground.Size = new System.Drawing.Size(686, 470);
+            this.PicBox_InventoryBackground.Size = new System.Drawing.Size(734, 509);
             this.PicBox_InventoryBackground.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PicBox_InventoryBackground.TabIndex = 23;
             this.PicBox_InventoryBackground.TabStop = false;
@@ -694,24 +810,18 @@
             this.PicBox_Player.TabIndex = 29;
             this.PicBox_Player.TabStop = false;
             // 
-            // Bt_HelpInv
+            // Timer2
             // 
-            this.Bt_HelpInv.ForeColor = System.Drawing.Color.Black;
-            this.Bt_HelpInv.Location = new System.Drawing.Point(541, 392);
-            this.Bt_HelpInv.Name = "Bt_HelpInv";
-            this.Bt_HelpInv.Size = new System.Drawing.Size(112, 53);
-            this.Bt_HelpInv.TabIndex = 24;
-            this.Bt_HelpInv.Text = "Help";
-            this.Bt_HelpInv.UseVisualStyleBackColor = true;
-            this.Bt_HelpInv.Click += new System.EventHandler(this.Bt_HelpInv_Click);
+            this.Timer2.Interval = 80;
+            this.Timer2.Tick += new System.EventHandler(this.Timer2_Tick);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 554);
-            this.Controls.Add(this.Bt_Help);
             this.Controls.Add(this.GrBox_Inventory);
+            this.Controls.Add(this.Bt_Help);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Lb_Title);
@@ -735,8 +845,10 @@
             this.Controls.Add(this.PicBox_TitleScreen);
             this.Controls.Add(this.PicBox_FightBackground);
             this.Controls.Add(this.PicBox_Player);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.GrBox_Inventory.ResumeLayout(false);
             this.GrBox_Inventory.PerformLayout();
@@ -821,6 +933,13 @@
         private System.Windows.Forms.PictureBox PicBox_Player;
         private System.Windows.Forms.PictureBox PicBox_InventoryBackground;
         private System.Windows.Forms.Button Bt_HelpInv;
+        private System.Windows.Forms.Timer Timer2;
+        private System.Windows.Forms.Label Lb_Defense;
+        private System.Windows.Forms.Label Lb_SpecialDamage;
+        private System.Windows.Forms.Label Lb_Damage;
+        private System.Windows.Forms.Label Lb_Armor;
+        private System.Windows.Forms.Label Lb_Thorns;
+        private System.Windows.Forms.Label Lb_DodgeProb;
     }
 }
 

@@ -11,6 +11,7 @@ namespace Juego.BackEnd
 {
     public class Equipment
     {
+        public string ID_Item { get; set; }
         public string Name { get; set; } = "";
         public int Damage { get; set; } = 0;
         public int Armor { get; set; } = 0;

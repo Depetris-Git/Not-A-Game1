@@ -15,8 +15,8 @@ namespace Juego.BackEnd
         public int MaxHP { get; set; } = 30;
         public int Level { get; set; } = 1;
         public float Exp { get; set; } = 0;
-        public int Attack_Damage { get; set; } = 5;
-        public int Defense_Capacity { get; set; } = 4;
+        public int Attack_Damage { get; set; } = 1;
+        public int Defense_Capacity { get; set; } = 3;
         public bool Defending { get; set; } = false;
         public int Dodge_Proficiency { get; set; } = 45;
         public bool Dodging { get; set; } = false;
@@ -25,6 +25,10 @@ namespace Juego.BackEnd
         public int Thorns { get; set; } = 0;
         public bool Alive { get; set; } = true;
         public bool IsTurn { get; set; } = false;
+        public int Armor { get; set; } = 0;
+        public int Total_Damage { get; set; } = 0;
+        public int Total_Defense { get; set; } = 0;
+        public int Dodge_Probability { get; set; } = 0;
 
         public void LevelUp()
         {
@@ -55,11 +59,21 @@ namespace Juego.BackEnd
 
             if (Alive && IsTurn)
             {
+                int Damage;
+                if ((Total_Damage - Target.Armor) < 0)
+                {
+                    Damage = 0;
+                }
+                else
+                {
+                    Damage = (Total_Damage - Target.Armor);
+                }
+
                 if (Target.Dodging)
                 {
                     if (Hit_prob >= Target.Dodge_Proficiency)
                     {
-                        Target.HP = Target.HP - Attack_Damage;
+                        Target.HP = Target.HP - Damage;
                     }
                     Target.Defending = false;
                     Target.Dodging = false;
@@ -68,9 +82,9 @@ namespace Juego.BackEnd
                 }
                 else if (Target.Defending)
                 {
-                    if ((Attack_Damage - Target.Defense_Capacity) > 0)
+                    if ((Damage - Target.Defense_Capacity) > 0)
                     {
-                        Target.HP = Target.HP - (Attack_Damage - Target.Defense_Capacity);
+                        Target.HP = Target.HP - (Damage - Target.Defense_Capacity);
                     }
                     Target.Dodging = false;
                     Target.Defending = false;
@@ -79,7 +93,7 @@ namespace Juego.BackEnd
                 }
                 else
                 {
-                    Target.HP = Target.HP - Attack_Damage;
+                    Target.HP = Target.HP - Damage;
                     IsTurn = false;
                     Target.IsTurn = true;
                 }
@@ -95,11 +109,22 @@ namespace Juego.BackEnd
             int Hit_prob = random.Next(0, 101);
             if (Alive && IsTurn)
             {
+                int Damage;
+                if ((Special_Damage - Target.Armor) < 0)
+                {
+                    Damage = 0;
+                }
+                else
+                {
+                    Damage = (Special_Damage - Target.Armor);
+                }
+
                 if (Target.Dodging)
                 {
+
                     if (Hit_prob >= (Target.Dodge_Proficiency - 5))
                     {
-                        Target.HP = Target.HP - Special_Damage;
+                        Target.HP = Target.HP - Damage;
                     }
                     Target.Defending = false;
                     Target.Dodging = false;
@@ -108,9 +133,9 @@ namespace Juego.BackEnd
                 }
                 else if (Target.Defending)
                 {
-                    if ((Special_Damage - Target.Defense_Capacity) > 0)
+                    if ((Damage - Target.Defense_Capacity) > 0)
                     {
-                        Target.HP = Target.HP - (Special_Damage - Target.Defense_Capacity);
+                        Target.HP = Target.HP - (Damage - Target.Defense_Capacity);
                     }
                     Target.Defending = false;
                     Target.Dodging = false;
@@ -119,7 +144,7 @@ namespace Juego.BackEnd
                 }
                 else
                 {
-                    Target.HP = Target.HP - Special_Damage;
+                    Target.HP = Target.HP - Damage;
                     IsTurn = false;
                     Target.IsTurn = true;
                 }
